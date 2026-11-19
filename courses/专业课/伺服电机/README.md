@@ -1,0 +1,18 @@
+# 伺服电机
+
+本批资料由仓库维护者提供，来源包为「伺服电机.zip」。原作者署名及使用条件见各文件。
+
+## 资料目录（12 份）
+
+- [伺服电机复习.docx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E4%BC%BA%E6%9C%8D%E7%94%B5%E6%9C%BA%E5%A4%8D%E4%B9%A0.docx)
+- [变压器.pptx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E5%8F%98%E5%8E%8B%E5%99%A8.pptx)
+- [复习.pptx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E5%A4%8D%E4%B9%A0.pptx)
+- [电机工作原理.docx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%94%B5%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.docx)
+- [直流电机.pdf](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA.pdf)
+- [直流电机.pptx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA.pptx)
+- [第11章 步进电动机.ppt](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%AC%AC11%E7%AB%A0%20%E6%AD%A5%E8%BF%9B%E7%94%B5%E5%8A%A8%E6%9C%BA.ppt)
+- [第1章 绪论1.pptx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%AC%AC1%E7%AB%A0%20%E7%BB%AA%E8%AE%BA1.pptx)
+- [第3章 直流伺服电动机.ppt](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%AC%AC3%E7%AB%A0%20%E7%9B%B4%E6%B5%81%E4%BC%BA%E6%9C%8D%E7%94%B5%E5%8A%A8%E6%9C%BA.ppt)
+- [第4章 变压器.ppt](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%AC%AC4%E7%AB%A0%20%E5%8F%98%E5%8E%8B%E5%99%A8.ppt)
+- [第7章 异步型交流伺服电动机.ppt](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E7%AC%AC7%E7%AB%A0%20%E5%BC%82%E6%AD%A5%E5%9E%8B%E4%BA%A4%E6%B5%81%E4%BC%BA%E6%9C%8D%E7%94%B5%E5%8A%A8%E6%9C%BA.ppt)
+- [计算.docx](%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/%E8%AE%A1%E7%AE%97.docx)

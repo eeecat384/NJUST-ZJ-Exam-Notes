@@ -1,0 +1,99 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    11/25/2023  10:03:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL5\C51\BIN\BL51.EXE .\Objects\单片机shiyan.obj TO .\Objects\c51 PRINT (.\Listings\c51.m51) CODE (0X0000-0X0FFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\单片机shiyan.obj (______SHIYAN)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\c51 (______SHIYAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0020H     UNIT         ?PR?_DELAY?______SHIYAN
+            CODE    0820H     0012H     UNIT         ?PR?MAIN?______SHIYAN
+            CODE    0832H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\c51 (______SHIYAN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?______SHIYAN
+
+?PR?MAIN?______SHIYAN
+  +--> ?PR?_DELAY?______SHIYAN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\c51 (______SHIYAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______SHIYAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0800H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:0820H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/25/2023  10:03:24  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        ms
+  -------         DO            
+  D:0004H         SYMBOL        t1
+  D:0002H         SYMBOL        t2
+  -------         ENDDO         
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0800H         LINE#         7
+  C:080AH         LINE#         8
+  C:081FH         LINE#         9
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0820H         LINE#         10
+  C:0820H         LINE#         11
+  C:0820H         LINE#         12
+  C:0820H         LINE#         13
+  C:0820H         LINE#         14
+  C:0823H         LINE#         15
+  C:082AH         LINE#         16
+  C:082DH         LINE#         17
+  C:0830H         LINE#         18
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ______SHIYAN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0032H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=65
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

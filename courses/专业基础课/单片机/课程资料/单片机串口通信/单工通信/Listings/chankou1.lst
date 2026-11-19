@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.7.0   CHANKOU1                                                          12/02/2023 15:28:03 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE CHANKOU1
+OBJECT MODULE PLACED IN .\Objects\chankou1.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE chankou1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ch
+                    -ankou1.lst) OBJECT(.\Objects\chankou1.obj)
+
+line level    source
+
+   1          #include "reg51.h"
+   2          #include"string.h"
+   3          char s[]=0x41;
+   4                  
+   5          void main()
+   6          {
+   7   1      char a,b=0;
+   8   1              TMOD=0x20;
+   9   1              SCON=0x40;
+  10   1              TH1=0xF4;
+  11   1              TL1=0xF4;
+  12   1              TR1=1;
+  13   1              a=strlen(s);
+  14   1              for (;b<a;b++)
+  15   1              {
+  16   2                      SBUF=s[b];
+  17   2                      while(!TI);
+  18   2                      TI=0;
+  19   2              }
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     55    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

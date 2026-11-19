@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\bangongtongxin.obj" 
+TO ".\Objects\半双工通信" 
+PRINT(".\Listings\半双工通信.m51")

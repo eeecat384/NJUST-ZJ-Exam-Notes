@@ -1,0 +1,3 @@
+".\Objects\shiyan3.obj" 
+TO ".\Objects\shiyan3" 
+PRINT(".\Listings\shiyan3.m51")

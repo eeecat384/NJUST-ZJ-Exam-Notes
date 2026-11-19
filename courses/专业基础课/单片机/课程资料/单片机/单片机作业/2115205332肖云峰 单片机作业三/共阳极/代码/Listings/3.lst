@@ -1,0 +1,49 @@
+C51 COMPILER V9.56.0.0   3                                                                 10/17/2023 15:33:16 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE 3
+OBJECT MODULE PLACED IN .\Objects\3.obj
+COMPILER INVOKED BY: F:\KILLC51\C51\BIN\C51.EXE 3.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\3.lst) 
+                    -TABS(2) OBJECT(.\Objects\3.obj)
+
+line level    source
+
+   1          #include "reg51.h"
+   2          #include "intrins.h"
+   3          unsigned char code Tab[10] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+   4          
+   5          void delay_10ms()
+   6          {
+   7   1        unsigned int i = 800;
+   8   1        while(i--)_nop_();
+   9   1      }
+  10          void main (void)
+  11          {
+  12   1        unsigned int i,j;
+  13   1        P0 = 0x80;
+  14   1        P2 = 0x80;
+  15   1        while(1)
+  16   1        {
+  17   2          for(i=0;i<100;i=i+2)
+  18   2          {
+  19   3            P0=Tab[i/10];
+  20   3            P2=Tab[i%10];
+  21   3            j=105;
+  22   3            while(j--)delay_10ms();
+  23   3          }
+  24   2        }
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    116    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\DPJ.obj" 
+TO ".\Objects\DPJ.hex" 
+PRINT(".\Listings\DPJ.m51") CODE( 0X0000-0X0FFF )

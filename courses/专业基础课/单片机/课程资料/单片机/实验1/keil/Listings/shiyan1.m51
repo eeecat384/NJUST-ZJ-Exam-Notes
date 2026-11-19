@@ -1,0 +1,91 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/17/2022  09:08:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\BIN\BL51.EXE .\Objects\shiyan1.obj TO .\Objects\shiyan1 PRINT (.
+>> \Listings\shiyan1.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\shiyan1.obj (SHIYAN1)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\shiyan1 (SHIYAN1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002AH     UNIT         ?PR?MAIN?SHIYAN1
+            CODE    002DH     0012H     UNIT         ?PR?DELAY?SHIYAN1
+            CODE    003FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\shiyan1 (SHIYAN1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SHIYAN1
+
+?PR?MAIN?SHIYAN1
+  +--> ?PR?DELAY?SHIYAN1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\shiyan1 (SHIYAN1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SHIYAN1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:002DH         PUBLIC        delay
+  C:0003H         PUBLIC        main
+  B:0090H.0       PUBLIC        p10
+  -------         PROC          DELAY
+  -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/17/2022  09:08:19  PAGE 2
+
+
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:002DH         LINE#         5
+  C:002DH         LINE#         6
+  C:002DH         LINE#         7
+  C:0031H         LINE#         8
+  C:003EH         LINE#         9
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         11
+  C:0003H         LINE#         12
+  C:0003H         LINE#         14
+  C:0003H         LINE#         15
+  C:0003H         LINE#         16
+  C:0007H         LINE#         17
+  C:0009H         LINE#         18
+  C:0018H         LINE#         19
+  C:001CH         LINE#         20
+  C:001EH         LINE#         21
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SHIYAN1
+
+Program Size: data=9.0 xdata=0 code=75
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

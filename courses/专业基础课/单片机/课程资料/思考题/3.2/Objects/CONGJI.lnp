@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\CONGJI" 
+PRINT(".\Listings\CONGJI.m51")

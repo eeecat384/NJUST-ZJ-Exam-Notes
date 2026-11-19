@@ -1,0 +1,100 @@
+C51 COMPILER V9.59.0.0   C                                                                 05/24/2022 08:53:16 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE C
+OBJECT MODULE PLACED IN .\Objects\C.obj
+COMPILER INVOKED BY: D:\cnm\C51\BIN\C51.EXE C.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\C.lst) TABS
+                    -(2) OBJECT(.\Objects\C.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          char dis_dat[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+   3          unsigned char i,minute,second,minute0,minute1,second0,second1;
+   4          void T1_srv(void)interrupt 3
+   5          {
+   6   1        TH1=0x3c;
+   7   1        TL1=0xb0;
+   8   1        i--;
+   9   1        if(i==0)
+  10   1        {
+  11   2          i=20;
+  12   2          second++;
+  13   2          if(second==60)
+  14   2          {
+  15   3            second=0;
+  16   3            minute++;
+  17   3            if(minute==60)
+  18   3            {
+  19   4              minute=0;
+  20   4              
+  21   4              
+  22   4            }
+  23   3          }
+  24   2        }
+  25   1      }
+  26          void delay()
+  27          {int j=500;
+  28   1        while(j--);
+  29   1      }
+  30          void int0_srv(void)interrupt 0
+  31          {
+  32   1        minute++;
+  33   1        if(minute==60)
+  34   1        {minute=0;}
+  35   1      }
+  36          void int1_srv(void)interrupt 2
+  37          {
+  38   1        minute=0;
+  39   1        second=0;
+  40   1      }
+  41          void main()
+  42          {
+  43   1        i=20;
+  44   1        minute=0;
+  45   1        second=0;
+  46   1        TMOD=0x10;
+  47   1        TH1=0x3c;
+  48   1        TL1=0xb0;
+  49   1        ET1=1;
+  50   1        TCON=0x05;
+  51   1        EX0=1;
+  52   1        EX1=1;
+  53   1        EA=1;
+  54   1        TR1=1;
+C51 COMPILER V9.59.0.0   C                                                                 05/24/2022 08:53:16 PAGE 2   
+
+  55   1        while(1)
+  56   1        {
+  57   2          minute1=minute/10;
+  58   2          minute0=minute%10;
+  59   2          second1=second/10;
+  60   2          second0=second%10;
+  61   2          P2=0x80;
+  62   2          P0=dis_dat[second0];
+  63   2          delay();
+  64   2          P2=0x40;
+  65   2          P0=dis_dat[second1];
+  66   2          delay();
+  67   2          P2=0x20;
+  68   2          P0=dis_dat[minute0];
+  69   2          delay();
+  70   2          P2=0x10;
+  71   2          P0=dis_dat[minute1];
+  72   2          delay();
+  73   2        }
+  74   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    187    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     17    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

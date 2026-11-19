@@ -1,0 +1,57 @@
+#include "reg51.h" 
+unsigned char a,b,i;
+void main ( )
+{
+	TMOD=0x10;	
+  TH1=(65536-50000)/256;	
+  TL1=(65536-50000)%256;
+  EA=1;	
+  EX1=1;		
+  EX0=1; 
+	ET1=1;
+  PX1=1;	
+  PX0=1;
+  PT1=0;	
+  IT0=1;	
+  IT1=1;
+  TR1=1;	
+  a=0;
+	while(1);
+}
+void t1() interrupt 3 using 0
+{
+TH1=(65536-50000)/256;
+TL1=(65536-50000)%256;
+i++;
+if(i==20)
+  {
+	 i=0;
+	 a++;
+   b=0;	
+   b=a+a/10*6;	
+   if(b==0xa0)	
+	 {  b=0;
+		a=0;
+	 }
+P1=~b;
+P0=b;	 
+ }
+}
+void int0() interrupt 0 using 1
+{
+	a++;	
+//b=0;
+b=a+a/10*6; 
+	if(b==0xa0)
+	{
+    	b=0;
+		a=0;
+	}
+P1=~b;
+P0=b;
+}
+void int1() interrupt 2 using 2
+{a=0;	
+P1=~a;
+P0=a;
+}

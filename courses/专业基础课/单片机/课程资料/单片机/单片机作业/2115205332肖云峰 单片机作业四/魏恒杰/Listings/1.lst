@@ -1,0 +1,76 @@
+C51 COMPILER V9.56.0.0   1                                                                 10/25/2023 19:43:08 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE 1
+OBJECT MODULE PLACED IN .\Objects\1.obj
+COMPILER INVOKED BY: F:\KILLC51\C51\BIN\C51.EXE 1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\1.lst) 
+                    -TABS(2) OBJECT(.\Objects\1.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          bit isPrime(unsigned int num)
+   4          {
+   5   1        unsigned int i;
+   6   1        if (num < 2)
+   7   1          return 0;
+   8   1        for (i = 2; i <= num / 2; i++)
+   9   1        {
+  10   2          if (num % i == 0)
+  11   2            return 0;
+  12   2        }
+  13   1        return 1;
+  14   1      }
+  15          
+  16          void delay(void)
+  17          {
+  18   1        unsigned int i = 800;
+  19   1        while(i--)_nop_();
+*** WARNING C206 IN LINE 19 OF 1.c: '_nop_': missing function-prototype
+*** ERROR C264 IN LINE 19 OF 1.c: intrinsic '_nop_': declaration/activation error
+  20   1      }
+  21          
+  22          void main(void)
+  23          {
+  24   1        unsigned int number;
+  25   1        unsigned char digit1, digit2, digit3, digit4;
+  26   1      
+  27   1        TMOD = 0x01;   // ?????T0???1
+  28   1        TH0 = 0xFC;    // ???????
+  29   1        TL0 = 0x18;
+  30   1      
+  31   1        while (1)
+  32   1        {
+  33   2          for (number = 0; number <= 9999; number++)
+  34   2          {
+  35   3            if (isPrime(number))
+  36   3            {
+  37   4              digit1 = number / 1000;         // ??
+  38   4              digit2 = (number / 100) % 10;   // ??
+  39   4              digit3 = (number / 10) % 10;    // ??
+  40   4              digit4 = number % 10;           // ??
+  41   4      
+  42   4              P2 = 0x01; // ????????
+  43   4              P0 = digit1; // ???????
+  44   4              delay();
+  45   4      
+  46   4              P2 = 0x02; // ????????
+  47   4              P0 = digit2;
+  48   4              delay();
+  49   4      
+  50   4              P2 = 0x04; // ????????
+  51   4              P0 = digit3;
+  52   4              delay();
+C51 COMPILER V9.56.0.0   1                                                                 10/25/2023 19:43:08 PAGE 2   
+
+  53   4      
+  54   4              P2 = 0x08; // ????????
+  55   4              P0 = digit4;
+  56   4              delay();
+  57   4            }
+  58   3          }
+  59   2        }
+  60   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)

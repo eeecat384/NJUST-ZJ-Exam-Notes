@@ -1,0 +1,104 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/20/2023  21:24:51  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\KILLC51\C51\BIN\BL51.EXE .\Objects\3£®“ı£©.obj TO .\Objects\3£®“ı£© PRINT (.\Listings\3£®“ı£©.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\3£®“ı£©.obj (3______)
+  F:\KILLC51\C51\LIB\C51S.LIB (?C_STARTUP)
+  F:\KILLC51\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\3£®“ı£© (3______)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0062H     UNIT         ?PR?MAIN?3______
+            CODE    0065H     0055H     UNIT         ?C?LIB_CODE
+            CODE    00BAH     0012H     UNIT         ?PR?DELAY_10MS?3______
+            CODE    00CCH     000CH     UNIT         ?C_C51STARTUP
+            CODE    00D8H     000AH     UNIT         ?CO?3______
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\3£®“ı£© (3______)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?3______
+
+?PR?MAIN?3______
+  +--> ?CO?3______
+  +--> ?PR?DELAY_10MS?3______
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\3£®“ı£© (3______)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        3______
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  C:00D8H         PUBLIC        Tab
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/20/2023  21:24:51  PAGE 2
+
+
+  C:0003H         PUBLIC        main
+  C:00BAH         PUBLIC        delay_10ms
+  -------         PROC          DELAY_10MS
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:00BAH         LINE#         6
+  C:00BAH         LINE#         7
+  C:00BAH         LINE#         8
+  C:00BEH         LINE#         9
+  C:00CBH         LINE#         10
+  -------         ENDPROC       DELAY_10MS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        i
+  D:0082H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         12
+  C:0003H         LINE#         13
+  C:0003H         LINE#         15
+  C:0006H         LINE#         16
+  C:0009H         LINE#         17
+  C:0009H         LINE#         18
+  C:0009H         LINE#         19
+  C:0015H         LINE#         20
+  C:0015H         LINE#         21
+  C:002EH         LINE#         22
+  C:0047H         LINE#         23
+  C:004AH         LINE#         24
+  C:0057H         LINE#         25
+  C:005CH         LINE#         26
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        3______
+
+  -------         MODULE        ?C?UIDIV
+  C:0065H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=9.0 xdata=0 code=226
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

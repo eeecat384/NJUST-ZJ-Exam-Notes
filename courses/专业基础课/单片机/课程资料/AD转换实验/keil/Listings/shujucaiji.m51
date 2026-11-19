@@ -1,0 +1,248 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/26/2022  11:10:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\BIN\BL51.EXE .\Objects\shujucaiji.obj TO .\Objects\shujucaiji PR
+>> INT (.\Listings\shujucaiji.m51)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\shujucaiji.obj (SHUJUCAIJI)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51FPS.LIB (?C?CASTF)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C?SIDIV)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  E:\STUDY\大二\大二下\单片机\单片机安装（学生）\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\shujucaiji (SHUJUCAIJI)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0018H     UNIT         ?DT?SHUJUCAIJI
+            BIT     0020H.0   0000H.1   UNIT         ?BI?SHUJUCAIJI
+                    0020H.1   0000H.7                *** GAP ***
+            DATA    0021H     0004H     UNIT         _DATA_GROUP_
+            IDATA   0025H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0007H     UNIT         ?C_INITSEG
+                    000AH     0001H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0310H     UNIT         ?C?LIB_CODE
+            CODE    031EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    03AAH     005BH     UNIT         ?PR?_DISPLAY?SHUJUCAIJI
+            CODE    0405H     0050H     UNIT         ?PR?DATA_CHANGE?SHUJUCAIJI
+            CODE    0455H     0042H     UNIT         ?PR?AD_COVERT?SHUJUCAIJI
+            CODE    0497H     002BH     UNIT         ?PR?MAIN?SHUJUCAIJI
+            CODE    04C2H     001BH     UNIT         ?PR?TIMER0_INT?SHUJUCAIJI
+            CODE    04DDH     0015H     UNIT         ?CO?SHUJUCAIJI
+            CODE    04F2H     0012H     UNIT         ?PR?_DELAY?SHUJUCAIJI
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\shujucaiji (SHUJUCAIJI)
+
+
+SEGMENT                              DATA_GROUP 
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/26/2022  11:10:20  PAGE 2
+
+
+  +--> CALLED SEGMENT              START    LENGTH
+--------------------------------------------------
+?C_C51STARTUP                      -----    -----
+  +--> ?PR?MAIN?SHUJUCAIJI
+  +--> ?C_INITSEG
+
+?PR?MAIN?SHUJUCAIJI                -----    -----
+  +--> ?PR?AD_COVERT?SHUJUCAIJI
+  +--> ?PR?DATA_CHANGE?SHUJUCAIJI
+  +--> ?PR?_DISPLAY?SHUJUCAIJI
+
+?PR?_DISPLAY?SHUJUCAIJI            0021H    0004H
+  +--> ?CO?SHUJUCAIJI
+  +--> ?PR?_DELAY?SHUJUCAIJI
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\shujucaiji (SHUJUCAIJI)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SHUJUCAIJI
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0020H.0       PUBLIC        Timer_flag
+  D:0090H         PUBLIC        P1
+  C:04C2H         PUBLIC        timer0_int
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  D:0008H         PUBLIC        Timer_count
+  C:04F2H         PUBLIC        _delay
+  B:00B0H.2       PUBLIC        INT0
+  D:0009H         PUBLIC        k2
+  D:000AH         PUBLIC        result
+  C:0497H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  C:04DDH         PUBLIC        tab
+  D:000EH         PUBLIC        result_reg
+  C:0405H         PUBLIC        Data_change
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  C:03AAH         PUBLIC        _Display
+  C:0455H         PUBLIC        AD_Covert
+  D:0012H         PUBLIC        a
+  D:0014H         PUBLIC        b
+  D:0016H         PUBLIC        c
+  D:0018H         PUBLIC        d
+  D:001AH         PUBLIC        e
+  D:001CH         PUBLIC        i
+  D:001DH         PUBLIC        l
+  D:001EH         PUBLIC        r
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  -------         DO            
+  D:0004H         SYMBOL        j
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/26/2022  11:10:20  PAGE 3
+
+
+  -------         ENDDO         
+  C:04F2H         LINE#         16
+  C:04F2H         LINE#         17
+  C:04F2H         LINE#         18
+  C:04F5H         LINE#         19
+  C:04FCH         LINE#         20
+  C:0503H         LINE#         21
+  -------         ENDPROC       _DELAY
+  -------         PROC          AD_COVERT
+  C:0455H         LINE#         23
+  C:0455H         LINE#         24
+  C:0455H         LINE#         25
+  C:045BH         LINE#         26
+  C:045EH         LINE#         27
+  C:0461H         LINE#         28
+  C:0472H         LINE#         29
+  C:0496H         LINE#         30
+  -------         ENDPROC       AD_COVERT
+  -------         PROC          DATA_CHANGE
+  C:0405H         LINE#         32
+  C:0405H         LINE#         33
+  C:0405H         LINE#         34
+  C:041EH         LINE#         35
+  C:0429H         LINE#         36
+  C:0445H         LINE#         37
+  C:0454H         LINE#         38
+  -------         ENDPROC       DATA_CHANGE
+  -------         PROC          _DISPLAY
+  D:0021H         SYMBOL        ax
+  D:0023H         SYMBOL        bx
+  D:0002H         SYMBOL        cx
+  C:03AAH         LINE#         40
+  C:03B2H         LINE#         41
+  C:03B2H         LINE#         42
+  C:03B5H         LINE#         43
+  C:03B8H         LINE#         44
+  C:03C6H         LINE#         45
+  C:03CDH         LINE#         46
+  C:03D0H         LINE#         47
+  C:03D3H         LINE#         48
+  C:03E3H         LINE#         49
+  C:03E6H         LINE#         50
+  C:03E9H         LINE#         51
+  C:03ECH         LINE#         52
+  C:03FEH         LINE#         53
+  C:0401H         LINE#         54
+  C:0404H         LINE#         55
+  -------         ENDPROC       _DISPLAY
+  -------         PROC          MAIN
+  C:0497H         LINE#         57
+  C:0497H         LINE#         58
+  C:0497H         LINE#         59
+  C:049AH         LINE#         60
+  C:049DH         LINE#         61
+  C:04A0H         LINE#         62
+  C:04A2H         LINE#         63
+  C:04A4H         LINE#         64
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/26/2022  11:10:20  PAGE 4
+
+
+  C:04A6H         LINE#         65
+  C:04A6H         LINE#         66
+  C:04A6H         LINE#         67
+  C:04A9H         LINE#         68
+  C:04A9H         LINE#         69
+  C:04ABH         LINE#         70
+  C:04AEH         LINE#         71
+  C:04B1H         LINE#         72
+  C:04C0H         LINE#         73
+  C:04C0H         LINE#         74
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0_INT
+  C:04C2H         LINE#         77
+  C:04C6H         LINE#         79
+  C:04C9H         LINE#         80
+  C:04CCH         LINE#         81
+  C:04CEH         LINE#         82
+  C:04D3H         LINE#         83
+  C:04D3H         LINE#         84
+  C:04D6H         LINE#         85
+  C:04D8H         LINE#         86
+  C:04D8H         LINE#         87
+  -------         ENDPROC       TIMER0_INT
+  -------         ENDMOD        SHUJUCAIJI
+
+  -------         MODULE        ?C?FPMUL
+  C:000EH         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0117H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:01BEH         PUBLIC        ?C?FCASTC
+  C:01B9H         PUBLIC        ?C?FCASTI
+  C:01B4H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:01F2H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?IMUL
+  C:0273H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SIDIV
+  C:0285H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?LNEG
+  C:02BBH         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?UIDIV
+  C:02C9H         PUBLIC        ?C?UIDIV
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/26/2022  11:10:20  PAGE 5
+
+
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=37.1 xdata=0 code=1283
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

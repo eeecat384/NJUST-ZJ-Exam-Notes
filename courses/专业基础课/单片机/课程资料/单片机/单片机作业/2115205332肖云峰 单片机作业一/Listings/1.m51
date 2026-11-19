@@ -1,0 +1,90 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/04/2023  09:52:08  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\KILLC51\C51\BIN\BL51.EXE .\Objects\Text.obj TO .\Objects\1 PRINT (.\Listings\1.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Text.obj (TEXT)
+  F:\KILLC51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\1 (TEXT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002AH     UNIT         ?PR?MAIN?TEXT
+            CODE    002DH     0012H     UNIT         ?PR?DELAY_10MS?TEXT
+            CODE    003FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\1 (TEXT)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TEXT
+
+?PR?MAIN?TEXT
+  +--> ?PR?DELAY_10MS?TEXT
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\1 (TEXT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TEXT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0003H         PUBLIC        main
+  C:002DH         PUBLIC        delay_10ms
+  B:0090H.0       PUBLIC        p10
+  -------         PROC          DELAY_10MS
+  -------         DO            
+  D:0006H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/04/2023  09:52:08  PAGE 2
+
+
+  -------         ENDDO         
+  C:002DH         LINE#         4
+  C:002DH         LINE#         5
+  C:002DH         LINE#         6
+  C:0031H         LINE#         7
+  C:003EH         LINE#         8
+  -------         ENDPROC       DELAY_10MS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         9
+  C:0003H         LINE#         10
+  C:0003H         LINE#         12
+  C:0003H         LINE#         13
+  C:0003H         LINE#         14
+  C:0007H         LINE#         15
+  C:0009H         LINE#         16
+  C:0018H         LINE#         17
+  C:001CH         LINE#         18
+  C:001EH         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TEXT
+
+Program Size: data=9.0 xdata=0 code=75
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
